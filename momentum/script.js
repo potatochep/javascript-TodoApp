@@ -1,38 +1,28 @@
-const amIFat = null;
-let something;
-console.log(amIFat);
-console.log(something);
+const loginForm = document.querySelector("#login-form");
+const loginInput = document.querySelector("#login-form input");
+const greeting = document.querySelector("#greeting");
 
-const a = 5;
-const b = 20;
-let myName = "hyojin";
-console.log(a + b);
-console.log(a - b);
-console.log(a * b);
-console.log(a / b);
-console.log("My name is " + myName);
+const HIDDEN_CLASSNAME = "hidden";
+const USERNAME_KEY = "username";
 
-myName = "Kim Hyo Jin ";
+const savedUserName = localStorage.getItem(USERNAME_KEY);
 
-console.log("my name is " + myName);
+function paintGreetings(username) {
+  greeting.innerText = `Hello ${username}`;
+  greeting.classList.remove(HIDDEN_CLASSNAME);
+}
 
-const mon = "mon";
-const tue = "tue";
-const wed = "wed";
-const thu = "thu";
-const fri = "fri";
-const sat = "sat";
-const sun = "sun";
+function onLoginSubmit(event) {
+  event.preventDefault();
+  loginForm.classList.add(HIDDEN_CLASSNAME);
+  const username = loginInput.value;
+  localStorage.setItem(USERNAME_KEY, username);
+  paintGreetings(username);
+}
 
-const daysOfWeek = [mon, tue, wed, thu, fri, sat, sun];
-
-console.log(daysOfWeek);
-
-// Get Item from Array
-console.log(daysOfWeek[4]);
-console.log(daysOfWeek[0]);
-console.log(daysOfWeek[6]);
-
-//add one item to the array
-daysOfWeek.push("holiday");
-console.log(daysOfWeek);
+if (savedUserName === null) {
+  loginForm.classList.remove(HIDDEN_CLASSNAME);
+  loginForm.addEventListener("submit", onLoginSubmit);
+} else {
+  paintGreetings(savedUserName);
+}
