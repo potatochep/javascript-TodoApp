@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="" href="" />
+    <title>Momentum</title>
+  </head>
+  <body>
+    <form class="hidden" id="login-form">
+      <input
+        required
+        minlength="3"
+        maxlength="15"
+        type="text"
+        placeholder="What is your name?"
+      />
+      <button>Log in</button>
+    </form>
+    <h2 id="clock">00:00:00</h2>
+
+    <h1 id="greeting" class="hidden"></h1>
+    <button id="remove" class="hidden">Log out</button>
+
+    <div id="quotes">
+      <span></span>
+      <span></span>
+    </div>
+
+    <script src="js/grettings.js"></script>
+    <script src="js/clock.js"></script>
+    <script src="js/quote.js"></script>
+    <script src="js/bacground.js"></script>
+  </body>
+</html>
