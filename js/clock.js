@@ -11,8 +11,12 @@ function getHour() {
 
 //setInterval을 통해 매 1초마다 함수를 반복.
 //처음 페이지를 로드 했을때 1초의 인터발이 주어지므로 바로 함수를 시작하도록 함.
-getHour();
-setInterval(getHour, 1000);
+function init() {
+  getHour();
+  setInterval(getHour, 1000);
+}
+
+init();
 
 //setInterval(a,b) 함수: a에 적힌 함수를 b에 적힌 밀리초만큼
 //기다렸다가 정해진 밀리초에 따라 반복
