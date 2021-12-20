@@ -17,6 +17,16 @@ function deleteToDo(event) {
   saveToDos();
 }
 
+function tooManyList() {
+  const alertPage = document.querySelector(".too-many-list");
+  alertPage.classList.remove("hidden");
+}
+
+function lessList() {
+  const alertPage = document.querySelector(".too-many-list");
+  alertPage.classList.add("hidden");
+}
+
 function paintToDo(newToDo) {
   const li = document.createElement("li");
   li.id = newToDo.id;
@@ -25,8 +35,9 @@ function paintToDo(newToDo) {
   const button = document.createElement("button");
   button.innerText = "X";
   button.addEventListener("click", deleteToDo);
-  li.appendChild(span);
+  li.className = "todo-right__list";
   li.appendChild(button);
+  li.appendChild(span);
   toDoList.appendChild(li);
 }
 
@@ -39,11 +50,26 @@ function handelTodoSubmit(event) {
     id: Date.now(),
   };
   toDos.push(newToDoObject);
+  const numberOfToDo = toDos.length;
+  if (numberOfToDo > 16) {
+    tooManyList();
+  } else if (numberOfToDo <= 16) {
+    lessList();
+  }
   paintToDo(newToDoObject);
   saveToDos();
 }
 
 toDoForm.addEventListener("submit", handelTodoSubmit);
+
+const okayButton = document.querySelector(".too-many-list button");
+
+function delteAlertPage() {
+  const okayButton = document.querySelector(".too-many-list");
+  okayButton.classList.add("hidden");
+}
+
+okayButton.addEventListener("click", delteAlertPage);
 
 const savedToDos = localStorage.getItem(TODOS_KEY);
 

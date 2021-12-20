@@ -9,34 +9,57 @@
     <title>Momentum</title>
   </head>
   <body>
-    <form class="hidden" id="login-form">
-      <input
-        required
-        minlength="3"
-        maxlength="15"
-        type="text"
-        placeholder="What is your name?"
-      />
-      <button>Log in</button>
-    </form>
-    <h2 id="clock">00:00:00</h2>
+    <main>
+      <form class="hidden" id="login-form">
+        <input
+          required
+          minlength="3"
+          maxlength="15"
+          type="text"
+          placeholder="What is your name?"
+        />
+        <button>Log in</button>
+      </form>
+      <div class="main-button">
+        <button id="remove" class="hidden">Log out</button>
+      </div>
 
-    <h1 id="greeting" class="hidden"></h1>
-    <button id="remove" class="hidden">Log out</button>
+      <div class="main-hello">
+        <h1 id="greeting" class="hidden"></h1>
+      </div>
 
-    <form id="todo-form">
-      <input type="text" placeholder="Write a To do and press Enter" required />
-    </form>
-    <ul id="todo-list"></ul>
+      <div class="toDo-Left">
+        <h2 id="clock">00:00:00</h2>
+        <div id="weather">
+          <span></span>
+          <span></span>
+        </div>
+      </div>
 
-    <div id="quotes">
-      <span></span>
-      <span></span>
-    </div>
+      <div class="toDo-Right">
+        <span class="todo-right__title"> Today's To Dd </span>
 
-    <div id="weather">
-      <span></span>
-      <span></span>
+        <form id="todo-form">
+          <input
+            type="text"
+            placeholder="Write a To do and press Enter"
+            required
+            class="todo-form__input"
+            maxlength="50"
+          />
+        </form>
+        <ul id="todo-list"></ul>
+      </div>
+
+      <div id="quotes">
+        <span></span>
+        <span></span>
+      </div>
+    </main>
+
+    <div class="too-many-list hidden">
+      <span> You write Too many To do list. Please delte completed one </span>
+      <button>OKAY</button>
     </div>
 
     <script src="js/grettings.js"></script>

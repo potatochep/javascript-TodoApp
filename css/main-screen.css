@@ -1,0 +1,65 @@
+main {
+  width: 100%;
+  height: 100%;
+  display: grid;
+  gap: 1.5rem;
+  grid-template-columns: repeat(15, 1fr);
+  grid-template-rows: repeat(14, 1fr);
+}
+.main-button {
+  grid-column: 14;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.main-hello {
+  display: flex;
+  justify-content: center;
+  grid-row-start: 2;
+  grid-row-end: 4;
+  grid-column-start: 6;
+  grid-column-end: 11;
+  background-color: white;
+}
+
+.main-contents {
+  display: flex;
+  justify-content: center;
+}
+
+.toDo-Left,
+.toDo-Right {
+  background-color: tomato;
+  width: 100%;
+  grid-row-start: 4;
+  grid-row-end: 12;
+}
+
+.toDo-Left {
+  grid-column-start: 2;
+  grid-column-end: 8;
+}
+
+.toDo-Right {
+  grid-column-start: 9;
+  grid-column-end: 15;
+  display: flex;
+  flex-direction: column;
+}
+
+.grid-row-span-7 {
+  grid-row: span 7;
+}
+
+#quotes {
+  grid-row: 14;
+  grid-column-start: 5;
+  grid-column-end: 12;
+  text-align: center;
+  background-color: white;
+}
+
+#clock,
+#weather {
+  text-align: center;
+}
