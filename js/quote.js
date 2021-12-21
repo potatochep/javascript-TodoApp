@@ -45,8 +45,8 @@ const quotes = [
     author: "Martin Heidegger",
   },
 ];
-const quote = document.querySelector("#quotes div:first-child");
-const author = document.querySelector("#quotes div:last-child");
+const quote = document.querySelector("#quotes span:first-child");
+const author = document.querySelector("#quotes span:last-child");
 
 //math.radom()을 통해 랜덤한 숫자를 가져옴. 그 후 floor함수를 통해 내림을 해서 소수점을 없앰
 //floor를 사용한 이유는 9.XX가 10이 되기를 원하지 않기 때문
