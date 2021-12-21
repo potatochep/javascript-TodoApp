@@ -37,4 +37,5 @@ main {
   grid-column-end: 14;
   text-align: center;
   background: none;
+  font-size: 20px;
 }
