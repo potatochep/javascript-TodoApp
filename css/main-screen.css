@@ -33,8 +33,8 @@ main {
 
 #quotes {
   grid-row: 14;
-  grid-column-start: 5;
-  grid-column-end: 12;
+  grid-column-start: 3;
+  grid-column-end: 14;
   text-align: center;
   background: none;
 }
