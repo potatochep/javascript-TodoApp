@@ -1,0 +1,7 @@
+#remove {
+  background: none;
+  border: none;
+  color: tomato;
+  cursor: pointer;
+  width: 100%;
+}

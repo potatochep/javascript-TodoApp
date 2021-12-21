@@ -30,14 +30,17 @@ function lessList() {
 function paintToDo(newToDo) {
   const li = document.createElement("li");
   li.id = newToDo.id;
+  li.className = "todo-right__list";
   const span = document.createElement("span");
   span.innerText = newToDo.text;
-  const button = document.createElement("button");
-  button.innerText = "X";
-  button.addEventListener("click", deleteToDo);
-  li.className = "todo-right__list";
-  li.appendChild(button);
+  const deleteBtn = document.createElement("button");
+  deleteBtn.innerText = "X";
+  deleteBtn.addEventListener("click", deleteToDo);
+  const checkBtn = document.createElement("button");
+  checkBtn.innerText = "o";
+  li.appendChild(checkBtn);
   li.appendChild(span);
+  li.appendChild(deleteBtn);
   toDoList.appendChild(li);
 }
 

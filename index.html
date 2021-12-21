@@ -10,26 +10,23 @@
   </head>
   <body>
     <main>
-      <form class="hidden" id="login-form">
-        <input
-          required
-          minlength="3"
-          maxlength="15"
-          type="text"
-          placeholder="What is your name?"
-        />
-        <button>Log in</button>
-      </form>
       <div class="main-button">
-        <button id="remove" class="hidden">Log out</button>
+        <a href="logIn-page.html"
+          ><button id="remove" class="hidden">Log out</button></a
+        >
       </div>
 
       <div class="main-hello">
         <h1 id="greeting" class="hidden"></h1>
+        <h2 id="greeting-name"></h2>
       </div>
 
       <div class="toDo-Left">
-        <h2 id="clock">00:00:00</h2>
+        <div class="date-time">
+          <h1 class="calendar"></h1>
+          <h2 class="clock">00:00:00</h2>
+        </div>
+
         <div id="weather">
           <span></span>
           <span></span>
@@ -62,6 +59,7 @@
       <button>OKAY</button>
     </div>
 
+    <script src="js/pageChange.js"></script>
     <script src="js/grettings.js"></script>
     <script src="js/clock.js"></script>
     <script src="js/quote.js"></script>

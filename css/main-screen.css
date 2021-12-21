@@ -7,19 +7,10 @@ main {
   grid-template-rows: repeat(14, 1fr);
 }
 .main-button {
-  grid-column: 14;
+  grid-column-start: 14;
+  grid-column-end: 16;
   display: flex;
   justify-content: flex-end;
-}
-
-.main-hello {
-  display: flex;
-  justify-content: center;
-  grid-row-start: 2;
-  grid-row-end: 4;
-  grid-column-start: 6;
-  grid-column-end: 11;
-  background-color: white;
 }
 
 .main-contents {
@@ -27,7 +18,6 @@ main {
   justify-content: center;
 }
 
-.toDo-Left,
 .toDo-Right {
   background-color: tomato;
   width: 100%;
@@ -57,9 +47,4 @@ main {
   grid-column-end: 12;
   text-align: center;
   background-color: white;
-}
-
-#clock,
-#weather {
-  text-align: center;
 }

@@ -2,7 +2,11 @@
 /*screens*/
 @import "main-screen.css";
 /*componets*/
+@import "components/log-inPage.css";
+@import "components/todo-left.css";
 @import "components/todo-right.css";
+@import "components/log-out.css";
+@import "components/gretting.css";
 
 body {
   width: 100vw;

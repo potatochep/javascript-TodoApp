@@ -1,0 +1,23 @@
+.toDo-Left {
+  background-color: tomato;
+  width: 100%;
+  grid-row-start: 4;
+  grid-row-end: 12;
+}
+
+.date-time {
+  text-align: center;
+}
+
+.calendar {
+  font-size: 70px;
+}
+
+.clock {
+  margin-top: 10px;
+  font-size: 30px;
+}
+
+#weather {
+  text-align: center;
+}

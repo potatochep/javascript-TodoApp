@@ -1,12 +1,15 @@
-const clock = document.querySelector("#clock");
+const calendar = document.querySelector(".calendar");
+const clock = document.querySelector(".clock");
 //각각의 시간, 분, 초를 먼저 문자열로 변환.
 //그리고 그 문자열이 2자리 미만인 경우 앞에 0을 추가하도록 -> 그 후 #clock의 내용을 각각의 대응 시간으로 변환
 function getHour() {
   const date = new Date();
+  const month = String(date.getMonth()).padStart(2, "0");
+  const day = String(date.getDate()).padStart(2, "0");
   const housr = String(date.getHours()).padStart(2, "0");
   const minuts = String(date.getMinutes()).padStart(2, "0");
-  const seconds = String(date.getSeconds()).padStart(2, "0");
-  clock.innerText = `${housr}:${minuts}:${seconds}`;
+  calendar.innerText = `${month}. ${day}`;
+  clock.innerText = `${housr}:${minuts}`;
 }
 
 //setInterval을 통해 매 1초마다 함수를 반복.
