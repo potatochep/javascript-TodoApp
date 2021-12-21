@@ -1,4 +1,5 @@
 const API_KEY = "c1da8c352f8520ef04890ce0ad4c7d98";
+navigator.geolocation.getCurrentPosition(onGeoSuccess, onGeoFail);
 
 function onGeoSuccess(position) {
   const lat = position.coords.latitude;
@@ -17,5 +18,3 @@ function onGeoSuccess(position) {
 function onGeoFail() {
   alert("No Weather");
 }
-
-navigator.geolocation.getCurrentPosition(onGeoSuccess, onGeoFail);

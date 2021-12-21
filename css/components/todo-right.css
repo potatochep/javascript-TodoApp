@@ -1,3 +1,14 @@
+.toDo-Right {
+  background: none;
+  width: 100%;
+  grid-column-start: 9;
+  grid-column-end: 15;
+  grid-row-start: 4;
+  grid-row-end: 12;
+  display: flex;
+  flex-direction: column;
+}
+
 .todo-right__title {
   text-align: center;
   margin-top: 4%;
@@ -14,11 +25,12 @@
 
 .todo-form__input {
   width: 80%;
-  font-size: 20px;
+  font-size: 30px;
   color: black;
   background-color: rgba(0, 0, 0, 0);
   border: none;
   border-bottom: 1px solid black;
+  font-family: "Nanum Pen Script", cursive;
 }
 
 #todo-list {
@@ -27,13 +39,21 @@
   overflow: hidden;
 }
 
-.todo-right__list {
-  width: 80%;
-  margin-bottom: 4%;
-  margin-left: 10%;
+#todo-list li {
+  position: relative;
 }
 
-.todo-right__list span {
+.todo-right__list {
+  width: 80%;
+  margin-bottom: 6%;
+  margin-left: 10%;
+  display: flex;
+  justify-content: space-between;
+  font-size: 20px;
+}
+
+.list-left {
+  width: 80%;
 }
 
 .todo-right__list button {
@@ -42,4 +62,5 @@
   border-radius: 50px;
   cursor: pointer;
   margin-right: 2%;
+  margin-left: auto;
 }

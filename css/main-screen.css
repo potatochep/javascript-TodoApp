@@ -1,10 +1,19 @@
+body {
+  width: 100vw;
+  height: 100vh;
+}
+
 main {
-  width: 100%;
-  height: 100%;
+  width: 100vw;
+  height: 100vh;
   display: grid;
   gap: 1.5rem;
   grid-template-columns: repeat(15, 1fr);
   grid-template-rows: repeat(14, 1fr);
+}
+
+.main-screen {
+  font-family: "Nanum Pen Script", cursive;
 }
 .main-button {
   grid-column-start: 14;
@@ -13,32 +22,13 @@ main {
   justify-content: flex-end;
 }
 
+.main-button button {
+  font-family: "Nanum Pen Script", cursive;
+}
+
 .main-contents {
   display: flex;
   justify-content: center;
-}
-
-.toDo-Right {
-  background-color: tomato;
-  width: 100%;
-  grid-row-start: 4;
-  grid-row-end: 12;
-}
-
-.toDo-Left {
-  grid-column-start: 2;
-  grid-column-end: 8;
-}
-
-.toDo-Right {
-  grid-column-start: 9;
-  grid-column-end: 15;
-  display: flex;
-  flex-direction: column;
-}
-
-.grid-row-span-7 {
-  grid-row: span 7;
 }
 
 #quotes {
@@ -46,5 +36,5 @@ main {
   grid-column-start: 5;
   grid-column-end: 12;
   text-align: center;
-  background-color: white;
+  background: none;
 }

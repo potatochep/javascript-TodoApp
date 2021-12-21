@@ -5,20 +5,44 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="css/style.css" />
-    <link rel="" href="" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
     <title>Momentum</title>
   </head>
+
+  <div class="log-in-page">
+    <div class="log-in-page__title">
+      <h1>Welcome to TTD!!!</h1>
+      <p>
+        TTD can can check your to do list. With TTD do your jop more efficiently
+      </p>
+      <p>pleas write your name below</p>
+    </div>
+    <div class="log-in-page__form">
+      <form id="login-form">
+        <input
+          class="login-input"
+          required
+          minlength="3"
+          maxlength="15"
+          type="text"
+          placeholder="What is your name?"
+        />
+
+        <div>
+          <button>Log in</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
   <body>
-    <main>
+    <main class="main-screen">
       <div class="main-button">
-        <a href="logIn-page.html"
-          ><button id="remove" class="hidden">Log out</button></a
-        >
+        <button id="remove" class="hidden">Log out</button>
       </div>
 
       <div class="main-hello">
         <h1 id="greeting" class="hidden"></h1>
-        <h2 id="greeting-name"></h2>
       </div>
 
       <div class="toDo-Left">
@@ -34,15 +58,15 @@
       </div>
 
       <div class="toDo-Right">
-        <span class="todo-right__title"> Today's To Dd </span>
+        <span class="todo-right__title"> Today's To Do </span>
 
         <form id="todo-form">
           <input
             type="text"
-            placeholder="Write a To do and press Enter"
+            placeholder="Write Your to do and press Enter"
             required
             class="todo-form__input"
-            maxlength="50"
+            maxlength="40"
           />
         </form>
         <ul id="todo-list"></ul>
@@ -59,7 +83,6 @@
       <button>OKAY</button>
     </div>
 
-    <script src="js/pageChange.js"></script>
     <script src="js/grettings.js"></script>
     <script src="js/clock.js"></script>
     <script src="js/quote.js"></script>

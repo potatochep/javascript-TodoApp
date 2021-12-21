@@ -7,11 +7,7 @@
 @import "components/todo-right.css";
 @import "components/log-out.css";
 @import "components/gretting.css";
-
-body {
-  width: 100vw;
-  height: 100vh;
-}
+@import "components/animation.css";
 
 .bgImage {
   position: absolute;
